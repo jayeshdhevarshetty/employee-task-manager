@@ -12,7 +12,7 @@ pipeline{
         stage("Health checks"){
             steps{
                 sh "sleep 5"
-                sh "curl http://fastapi:8005"
+                sh "curl http://employee-task-manager:8005"
             }
         }
     }
