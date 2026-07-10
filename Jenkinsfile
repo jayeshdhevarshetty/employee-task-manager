@@ -12,7 +12,7 @@ pipeline{
         stage("Health checks"){
             steps{
                 sh "sleep 5"
-                sh "curl http://localhost:8005"
+                curl http://host.docker.internal:8005/health
             }
         }
     }
