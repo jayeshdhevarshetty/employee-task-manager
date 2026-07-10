@@ -1,0 +1,18 @@
+services:
+  redis:
+    image: redis:latest
+    networks:
+      - jd_network
+    
+
+
+  fastapi:
+    container_name: employee-task-manager
+    build: .
+    ports:
+      -8005:8005
+    networks:
+      - jd_network
+
+networks:
+  jd_network:
